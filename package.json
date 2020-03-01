@@ -1,0 +1,30 @@
+{
+  "name": "salarybh",
+  "version": "1.0.0",
+  "description": "practice node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon employee.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simcha",
+    "greenbaum"
+  ],
+  "author": "simcha Greenbaum",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "husky": "^4.2.3",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
