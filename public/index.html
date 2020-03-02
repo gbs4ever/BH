@@ -24,7 +24,7 @@
           api.data.forEach(function(person) {
             let li = document.createElement("li");
 
-            let employessHtml = `${person.title},${person.firstName},${person.lastName}, $${person.bonus}.00`;
+            let employessHtml = `${person.title}, ${person.firstName}, ${person.lastName}, ${person.bonus}`;
 
             li.innerHTML += employessHtml;
             console.log(li);

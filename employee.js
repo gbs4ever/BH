@@ -38,29 +38,28 @@ bh.updateArray(test2);
 bh.updateArray(test3);
 let array = bh.files;
 //itrate thru array and figure out bonus amount DONE
+let formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD"
+});
+let bonusConvo = (bonusRate, item) => {
+  const result = item.salary * bonusRate;
+  item.bonus = formatter.format(result);
+};
 for (let item of array) {
   if (item.postion === "Executive") {
-    let bonusRate = 0.2;
-    const result = item.salary * bonusRate;
-    item.bonus = result;
+    bonusConvo(0.2, item);
   }
   if (item.postion === "Supervisor") {
-    let bonusRate = 0.1;
-    const result = item.salary * bonusRate;
-    item.bonus = result;
+    bonusConvo(0.1, item);
   }
   if (item.postion === "Manager") {
-    bonusRate = 0.08;
-    result = item.salary * bonusRate;
-    item.bonus = result;
+    bonusConvo(0.8, item);
   }
   if (item.postion === "Employee") {
-    let bonusRate = 0.05;
-    const result = item.salary * bonusRate;
-    item.bonus = result;
+    bonusConvo(0.5, item);
   }
 }
-
 //sort array based on bonus level algrothim  DONE
 let sort = array.sort(compare);
 function compare(a, b) {
@@ -75,14 +74,10 @@ function compare(a, b) {
 
 bh.newDataarray(sort);
 const info = bh.files;
-
+console.log(info);
 // /// amount should be in dollors not integers $$$ make sure money is
-// // var formatter = new Intl.NumberFormat('en-US', {
-// // 	style: 'currency',
-// // 	currency: 'USD',
-// // });
 
-// formatter.format(2500);
+formatter.format(2500);
 
 const express = require("express");
 const app = express();
