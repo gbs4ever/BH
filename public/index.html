@@ -8,6 +8,7 @@
   <body>
     <div>Welcome to B & H Admin payroll Dept</div>
     <br />
+    <div id="message"></div>
     <button id="api" type="button">What is the salary Data</button> <br />
     <div id="data"></div>
   </body>
@@ -31,6 +32,9 @@
           });
 
           document.getElementById("api").remove();
+          document.getElementById(
+            "message"
+          ).innerHTML = `<p class="success-message">Thank you for updating the payroll.</p>`;
         });
     });
   </script>
