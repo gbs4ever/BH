@@ -74,10 +74,6 @@ function compare(a, b) {
 
 bh.newDataarray(sort);
 const info = bh.files;
-console.log(info);
-// /// amount should be in dollors not integers $$$ make sure money is
-
-formatter.format(2500);
 
 const express = require("express");
 const app = express();
