@@ -20,3 +20,4 @@ Currently, the app is set up to only send back data as JSON.
 - [x] Refactor employee.js using cleaner code .
 - [ ] use app.js and import data from db.
 - [x] change integer into correct currency.
+- [ ] change perosn.salary to an integer not string will pervent JS bugs .
