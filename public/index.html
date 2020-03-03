@@ -20,11 +20,16 @@
         .then(api => {
           ul = document.createElement("ul");
           document.getElementById("data").appendChild(ul);
-
+          let formatter = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+          });
           api.data.forEach(function(person) {
             let li = document.createElement("li");
 
-            let employessHtml = `${person.title}, ${person.firstName}, ${person.lastName}, ${person.bonus}`;
+            let employessHtml = `${person.title}, ${person.firstName}, ${
+              person.lastName
+            }, ${formatter.format(person.bonus)}`;
 
             li.innerHTML += employessHtml;
             console.log(li);
