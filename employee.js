@@ -7,9 +7,6 @@ class company {
   updateArray(employee) {
     this.files.push(employee);
   }
-  newDataarray(array) {
-    this.files = array;
-  }
 }
 class employee {
   constructor(postion, title, firstName, lastName, salary, bonus) {
@@ -36,16 +33,15 @@ let csvParse = (err, data) => {
 ///import file to string
 fs.readFile("names.csv", "utf8", csvParse);
 let createObjects = file => {
-  for (let item of file) {
-    let test5 = new employee(...item);
+  for (let name of file) {
+    let test5 = new employee(...name);
     bh.updateArray(test5);
   }
 };
 
 //itrate thru array and figure out bonus amount DONE
 let bonusConvo = (bonusRate, item) => {
-  const result = item.salary * bonusRate;
-  item.bonus = result;
+  item.bonus = item.salary * bonusRate;
 };
 let bonus = bh => {
   for (let item of bh) {
@@ -68,7 +64,6 @@ let sortBonusData = bh => {
   bh.sort(compare);
   function compare(a, b) {
     let comparison = 0;
-
     if (a.bonus < b.bonus) {
       comparison = 1;
     } else if (a.bonus < b.bonus) {
@@ -77,7 +72,7 @@ let sortBonusData = bh => {
     return comparison;
   }
 };
-
+//http
 const express = require("express");
 const app = express();
 const parser = require("body-parser");
@@ -87,7 +82,7 @@ app.use(express.static("public"));
 app.get("/api", (req, res, next) => {
   res.json({
     Status: "Active",
-    grade: "test",
+    grade: "Live",
     data: jsonData
   });
 });
