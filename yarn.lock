@@ -350,6 +350,11 @@ crypto-random-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
   integrity sha1-ojD2T1aDEOFJgAmUB5DsmVRbyn4=
 
+csv-string@^3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/csv-string/-/csv-string-3.1.8.tgz#732ac993420a505471106aab00ab0183ba194fc2"
+  integrity sha512-5Mwdju/gmAhAyJu0WBG+v0GgaQrlSVVg9qrywcgADegyne2NwrdDAOIQ+CpalgwkodrhqcP55juua924psyRpQ==
+
 debug@2.6.9, debug@^2.2.0:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
