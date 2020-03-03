@@ -16,7 +16,7 @@ Currently, the app is set up to only send back data as JSON.
 
 - [x] create server to send only json.
 - [ ] depending on the route used render ejs or send JSON data .
-- [ ] Retrive data from a csv or txt file no hard coding .
+- [x] Retrive data from a csv or txt file no hard coding .
 - [x] Refactor employee.js using cleaner code .
 - [ ] use app.js and import data from db.
 - [x] change integer into correct currency.
